@@ -1,4 +1,12 @@
 package com.example.demo.record;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
-public record UserRecord(String name, String email, String address) {}
+@AllArgsConstructor
+@Data
+public class UserRecord {
+    private String name;
+    private String email;
+    private  String address;
+}
