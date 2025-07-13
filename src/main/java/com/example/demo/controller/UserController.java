@@ -9,9 +9,11 @@ import java.util.UUID;
 @RestController
 public class UserController {
 
+    private final String uuid = UUID.randomUUID().toString();
+
     @GetMapping("/getUser")
     public String getUser() {
-        return new UserRecord("Kaolin", "kaolin@gmail.com", "123 Main St", UUID.randomUUID().toString())
+        return new UserRecord("Kaolin", "kaolin@gmail.com", "123 Main St", uuid)
                 .toString();
     }
 }
